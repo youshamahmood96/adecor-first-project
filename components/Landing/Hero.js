@@ -1,6 +1,4 @@
 import styles from '../../styles/Hero.module.css'
-import { motion } from "framer-motion"
-import FadeIn from 'react-fade-in';
 import { useEffect, useState } from 'react'
 import { scroller } from 'react-scroll';
 const Hero = ()=>{
@@ -30,7 +28,7 @@ const Hero = ()=>{
         </div>
         <div className={styles.bottom}>
         <h1>Devil Divides</h1>
-        <FadeIn><img src="/scroll-button.png" onClick={()=>smoothScroll('verse-container')}  alt=""/></FadeIn>
+        <img src="/scroll-button.png" onClick={()=>smoothScroll('verse-container')}  alt=""/>
         </div>
         </div>
     )
