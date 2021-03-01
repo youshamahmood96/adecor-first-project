@@ -1,0 +1,59 @@
+#hero{
+    height:100vh;
+}
+.top{
+    height:50vh;
+    position:relative;
+}
+.top h1{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size:var(--fontHeader);
+    font-weight:var(--fontWeightHeader);
+}
+.bottom{
+    height:50vh;
+    background-color:var(--primary);
+    position:relative;
+}
+.bottom img{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.bottom h1{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color:white;
+    font-size:var(--fontHeader);
+    font-weight:var(--fontWeightHeader);
+}
+.heroButton{
+    height:48px;
+    width:154px;
+    font-family: 'Fondamento', cursive;
+    font-weight:400;
+    line-height:33.21px;
+    font-size:24px;
+    background-color:#FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 16px;
+    position:absolute;
+    bottom:-24px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:1; 
+}
+.scrollButton{
+    
+}

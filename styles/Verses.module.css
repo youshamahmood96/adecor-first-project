@@ -1,0 +1,47 @@
+#verses{
+    min-height:100vh;
+    position: relative;
+}
+.center{
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#verses h4{
+    font-weight:300;
+}
+.verse{
+    font-size:25px;
+    font-weight:500;
+    font-family: 'Sorts Mill Goudy', serif;
+}
+.reference{
+    font-family:'Katibeh', cursive;
+    display: flex;
+    font-size:25px;
+    flex-direction: row; 
+}
+.reference:before, 
+.reference:after { 
+    content: ""; 
+    flex: 1 1; 
+    border-top: 1px solid #000000; 
+    margin: auto; 
+} 
+@media only screen and (min-width: 681px) {
+    #verses{
+        margin:200px;
+    }
+}
+@media only screen and (max-width: 680px) {
+    #verses{
+        margin:100px;
+    }
+}
+@media only screen and (max-width: 679px) {
+    #verses{
+        margin:50px;
+    }
+}
