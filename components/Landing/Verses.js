@@ -7,7 +7,7 @@ const Verses = ()=>{
         <div id="verse-container">
         {
             allVerses.map((data,index)=>(
-                <div id={styles.verses} key={index} >
+                <div id={styles.verses} key={index}>
                 <div className={styles.center}>
                 <p className={styles.verse}>{data.verse}</p>
                 <h4 className={styles.reference} > <hr/> &nbsp;&nbsp; {data.reference} &nbsp;&nbsp; <hr/> </h4>
