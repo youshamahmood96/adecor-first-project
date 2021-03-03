@@ -1,6 +1,8 @@
 import styles from '../../styles/Hero.module.css'
 import { useEffect, useState } from 'react'
 import { scroller } from 'react-scroll';
+import Aos from 'aos';
+import "aos/dist/aos.css"
 const Hero = ()=>{
     const smoothScroll = (id) => {
         scroller.scrollTo(id, {
@@ -11,6 +13,7 @@ const Hero = ()=>{
     }
     let [opacity,setOpacity] = useState(1)
     useEffect(()=>{
+        Aos.init({duration:2000},[])
         const handleScroll = () =>{
             const y = window.scrollY
             setOpacity(1-(y/800))
@@ -21,7 +24,8 @@ const Hero = ()=>{
         }
     },[opacity])
     return(
-        <div id={styles.hero} style={{opacity}} >
+        <div data-aos="fade-down" style={{opacity}} >
+        <div id={styles.hero}>
         <div className={styles.top}>
         <h1>God Guides</h1>
         <button className={styles.heroButton} >and the</button>
@@ -31,6 +35,8 @@ const Hero = ()=>{
         <img src="/scroll-button.png" onClick={()=>smoothScroll('verse-container')}  alt=""/>
         </div>
         </div>
+        </div>
+        
     )
 }
 export default Hero 
