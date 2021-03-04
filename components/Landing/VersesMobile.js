@@ -4,9 +4,8 @@ import ScrollAnimation from 'react-animate-on-scroll'
 import Aos from 'aos';
 import "aos/dist/aos.css"
 const VersesMobile = () => {
-    console.log(ScrollAnimation);
     useEffect(()=>{
-        Aos.init({duration:500},[])
+        Aos.init({duration:100},[])
     },[])
     return (
         <div>
