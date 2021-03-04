@@ -32,7 +32,7 @@ const Hero = ()=>{
         </div>
         <div className={styles.bottom}>
         <h1>Devil Divides</h1>
-        <img src="/scroll-button.png" onClick={()=>smoothScroll('verse-container')}  alt=""/>
+        <img  style={{color:'white !important'}} src="/scroll-btn-white.png" onClick={()=>smoothScroll('verse-container')}  alt=""/>
         </div>
         </div>
         </div>

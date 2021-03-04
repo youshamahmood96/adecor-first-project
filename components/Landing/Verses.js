@@ -7,7 +7,7 @@ const Verses = () => {
     const propB = useRef(null)
     const propC = useRef(null)
     const propD = useRef(null)
-    const [progressA, setProgressA] = useState(0)
+    const [progressA, setProgressA] = useState(0.2)
     const [progressB, setProgressB] = useState(0.2)
     const [progressC, setProgressC] = useState(0.2)
     const [progressD, setProgressD] = useState(0.2)
@@ -25,19 +25,13 @@ const Verses = () => {
                 start: "top center",
                 end: "bottom center",
                 onUpdate: self => {
-                    if(progressA<=0.5 && progressA<1){ 
-                        setProgressA(1-(Math.cos(degrees_to_radians(self.progress * 90)*2)))
+                    console.log(self.progress);
+                    if(self.progress>=0.13){
+                        setProgressA(self.progress*2)
                     }
-                    else if(progressA>1){ 
-                        setProgressA(1-(Math.cos(degrees_to_radians(self.progress * 90)*2)))  
+                    if(self.progress>=0.68){
+                        setProgressA(1-self.progress+0.3)
                     }
-                    else{
-                        setProgressA(Math.cos(degrees_to_radians(self.progress * 90)*2))
-                    }
-                    if(self.progress>=0.6){
-                        setProgressA(1-self.progress)
-                    }
-                   
                 }
             },
         })
@@ -49,7 +43,7 @@ const Verses = () => {
                 end: "bottom top",
                 onUpdate: self => {
                     if(self.progress<=0.15){
-                        setProgressB(self.progress+0.2)
+                        setProgressB(self.progress+0.6)
                     }
                     else{setProgressB(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}
                 }
@@ -64,7 +58,7 @@ const Verses = () => {
                 onUpdate: self => { 
                     if(self.progress<=0.13){
                         console.log(self.progress);
-                        setProgressC(self.progress+0.2)
+                        setProgressC(self.progress+0.6)
                     }
                     else{setProgressC(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}}
             },
@@ -78,7 +72,7 @@ const Verses = () => {
                 onUpdate: self => {
                     if(self.progress<=0.11){
                         console.log(self.progress);
-                        setProgressD(self.progress+0.2)
+                        setProgressD(self.progress+0.6)
                     }
                     else{setProgressD(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}
                 }
