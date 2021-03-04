@@ -2,10 +2,11 @@ import { useEffect, useState } from 'react'
 import Hero from './Hero'
 import Verses from './Verses'
 import VersesMobile from './VersesMobile'
+import Vox from './Vox'
 const Landing = ()=>{
     const [dimensions, setDimensions] = useState({ 
         height: undefined,
-        width: 1000
+        width: 680
       })
       useEffect(()=>{
         if(typeof window !=='undefined')
@@ -30,8 +31,7 @@ const Landing = ()=>{
     return(
         <>
         <Hero></Hero>
-        {width>=780 && <Verses></Verses>}
-        {width<780 && <VersesMobile></VersesMobile>}
+        {width>=780 ? <Verses></Verses>:<Vox></Vox>}
         </>
     )
 }
