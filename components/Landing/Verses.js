@@ -1,47 +1,118 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles from '../../styles/Verses.module.css'
-import data from './Verses.json'
-import Aos from 'aos';
 import "aos/dist/aos.css"
-const Verses = ()=>{
-    const {allVerses} = data
-    let [opacity,setOpacity] = useState(1)
-    useEffect(()=>{
-        const handleScroll = () =>{
-            const y = window.scrollY
-            let z = y%window.innerHeight*0.3
-            function toRadians (angle) {
-                return angle * (Math.PI / 180);
-            }
-            if(Math.sin(toRadians(z))>=0){
-                setOpacity(Math.abs(Math.sin(toRadians(z+90)))+0.3)
-            }
-        }
-        window.addEventListener('scroll',handleScroll,false)
-        return () =>{
-            window.removeEventListener('scroll',handleScroll,false)
-        }
-    },[])
-    console.log(opacity);
-    return(
-        <div id="verse-container">
-        {
-            allVerses.map((data,index)=>(
-                <div 
-                id={styles.verses} 
-                key={index} 
-                style={{opacity}} 
-                >
+import gsap from 'gsap/gsap-core';
+import { ScrollTrigger } from 'gsap/all';
+const Verses = () => {
+    const propA = useRef(null)
+    const propB = useRef(null)
+    const propC = useRef(null)
+    const propD = useRef(null)
+    const [progressA,setProgressA] = useState(null)
+    const [progressB,setProgressB] = useState(null)
+    const [progressC,setProgressC] = useState(null)
+    const [progressD,setProgressD] = useState(null)
+    
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger)
+        gsap.to(propA.current, {
+            scrollTrigger: {
+                trigger: propA.current,
+                toggleActions: "restart restart restart restart",
+                start: "top center",
+                end: "bottom top",
+                onUpdate: self => {
+                    setProgressA(1-self.progress)
+                }
+            },
+        })
+        gsap.to(propB.current, {
+            scrollTrigger: {
+                trigger: propB.current,
+                toggleActions: "restart restart restart restart",
+                start: "top center",
+                end: "bottom top",
+                onUpdate: self => {
+                    setProgressB(1-self.progress)
+                }
+            },
+        })
+        gsap.to(propC.current, {
+            scrollTrigger: {
+                trigger: propC.current,
+                toggleActions: "restart restart restart restart",
+                start: "top center",
+                end: "bottom top",
+                onUpdate: self => {
+                    setProgressC(1-self.progress)
+                }
+            },
+        })
+        gsap.to(propD.current, {
+            scrollTrigger: {
+                trigger: propD.current,
+                toggleActions: "restart restart restart restart",
+                start: "top center",
+                end: "bottom top",
+                onUpdate: self => {
+                    setProgressD(1-self.progress)
+                }
+            },
+        })
+    }, [propA,propB,propC,propD])
+    return (
+
+        <>
+            <div
+                className={styles.verses}
+                ref={propA}
+                style={{opacity:progressA}}
+            >
                 <div className={styles.center}>
-                <div >
-                <p  className={styles.verse}>{data.verse}</p>
-                <h4 className={styles.reference} > <hr/> &nbsp;&nbsp; {data.reference} &nbsp;&nbsp; <hr/> </h4>
+                    <p className={styles.verse}>
+                        By the sun and its brightness, and the moon as it follows it, and the day as it unveils it, and the night as it conceals it! And by heaven and ˹the One˺ Who built it, and the earth and ˹the One˺ Who spread it! And by the soul and ˹the One˺ Who fashioned it, then with ˹the knowledge of˺ right and wrong inspired it! Successful indeed is the one who purifies their soul, and doomed is the one who corrupts it!
+                </p>
+                    <h4 className={styles.reference} > <hr /> &nbsp;&nbsp; Chapter 91 | Verse 1-10 &nbsp;&nbsp; <hr /> </h4>
                 </div>
+            </div>
+            <div
+            ref={propB}
+            style={{opacity:progressB}}
+            className={styles.verses}
+            >
+                <div className={styles.center}>
+                    <p className={styles.verse}>
+                        For indeed, We ˹alone˺ created humans from a drop of mixed fluids, ˹in order˺ to test them, so We made them hear and see. We already showed them the Way, whether they ˹choose to˺ be grateful or ungrateful.
+                </p>
+                    <h4 className={styles.reference} > <hr /> &nbsp;&nbsp; Chapter 76 | Verse 3 &nbsp;&nbsp; <hr /> </h4>
                 </div>
+            </div>
+            <div
+            ref={propC}
+            style={{opacity:progressC}}
+            className={styles.verses}
+            >
+                <div className={styles.center}>
+                    <p className={styles.verse}>
+                        It is We Who created them and perfected their ˹physical˺ form. But if We will, We can easily replace them with others. Surely this is a reminder. So let whoever wills take the ˹Right˺ Way to their Lord. But you cannot will ˹to do so˺ unless Allah wills. Indeed, Allah is All-Knowing, All-Wise
+                </p>
+                    <h4 className={styles.reference} > <hr /> &nbsp;&nbsp; Chapter 76 | Verse 28-30 &nbsp;&nbsp; <hr /> </h4>
                 </div>
-    ))
-        }
-        </div>
+            </div>
+            <div
+            ref={propD}
+            style={{opacity:progressD}}
+            className={styles.verses}
+            >
+                <div className={styles.center}>
+                    <p className={styles.verse}>
+                        Allah is the Light of the heavens and the earth. His light is like a niche in which there is a lamp, the lamp is in a crystal, the crystal is like a shining star, lit from ˹the oil of˺ a blessed olive tree, ˹located˺ neither to the east nor the west, whose oil would almost glow, even without being touched by fire. Light upon light! Allah guides whoever He wills to His light. And Allah sets forth parables for humanity. For Allah has ˹perfect˺ knowledge of all things.
+                </p>
+                    <h4 className={styles.reference} > <hr /> &nbsp;&nbsp; Chapter 24 | Verse 35 &nbsp;&nbsp; <hr /> </h4>
+                </div>
+            </div>
+        </>
+
     )
 }
 export default Verses

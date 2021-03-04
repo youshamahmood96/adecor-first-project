@@ -1,4 +1,4 @@
-#verses{
+.verses{
     min-height:100vh;
     position: relative;
 }
@@ -9,7 +9,7 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-#verses h4{
+.verses h4{
     font-weight:300;
 }
 .verse{
@@ -31,12 +31,12 @@
     margin: auto; 
 } 
 @media only screen and (min-width: 681px) {
-    #verses{
+    .verses{
         margin:200px;
     }
 }
 @media only screen and (max-width: 680px) {
-    #verses{
+    .verses{
         margin-top:30px;
     }
     .center{
