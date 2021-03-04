@@ -37,7 +37,7 @@
 }
 @media only screen and (max-width: 680px) {
     .verses{
-        margin-top:30px;
+        margin:30px 40px;
     }
     .center{
         margin: 0;

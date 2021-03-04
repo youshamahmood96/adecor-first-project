@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styles from '../../styles/Verses.module.css'
-import "aos/dist/aos.css"
 import gsap from 'gsap/gsap-core';
 import { ScrollTrigger } from 'gsap/all';
 const Verses = () => {
@@ -22,7 +21,7 @@ const Verses = () => {
                 start: "top center",
                 end: "bottom top",
                 onUpdate: self => {
-                    setProgressA(1-self.progress)
+                    setProgressA(1-self.progress+0.3)
                 }
             },
         })
@@ -33,7 +32,7 @@ const Verses = () => {
                 start: "top center",
                 end: "bottom top",
                 onUpdate: self => {
-                    setProgressB(1-self.progress)
+                    setProgressB(1-self.progress+0.3)
                 }
             },
         })
@@ -44,7 +43,7 @@ const Verses = () => {
                 start: "top center",
                 end: "bottom top",
                 onUpdate: self => {
-                    setProgressC(1-self.progress)
+                    setProgressC(1-self.progress+0.3)
                 }
             },
         })
@@ -55,20 +54,20 @@ const Verses = () => {
                 start: "top center",
                 end: "bottom top",
                 onUpdate: self => {
-                    setProgressD(1-self.progress)
+                    setProgressD(1-self.progress+0.3)
                 }
             },
         })
     }, [propA,propB,propC,propD])
-    return (
+        return (
 
         <>
-            <div
+            <div id="verse-container"
                 className={styles.verses}
-                ref={propA}
-                style={{opacity:progressA}}
+                
             >
-                <div className={styles.center}>
+                <div ref={propA}
+                style={{opacity:progressA}} className={styles.center}>
                     <p className={styles.verse}>
                         By the sun and its brightness, and the moon as it follows it, and the day as it unveils it, and the night as it conceals it! And by heaven and ˹the One˺ Who built it, and the earth and ˹the One˺ Who spread it! And by the soul and ˹the One˺ Who fashioned it, then with ˹the knowledge of˺ right and wrong inspired it! Successful indeed is the one who purifies their soul, and doomed is the one who corrupts it!
                 </p>
