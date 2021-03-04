@@ -7,11 +7,15 @@ const Verses = () => {
     const propB = useRef(null)
     const propC = useRef(null)
     const propD = useRef(null)
-    const [progressA,setProgressA] = useState(null)
-    const [progressB,setProgressB] = useState(null)
-    const [progressC,setProgressC] = useState(null)
-    const [progressD,setProgressD] = useState(null)
-    
+    const [progressA, setProgressA] = useState(null)
+    const [progressB, setProgressB] = useState(null)
+    const [progressC, setProgressC] = useState(null)
+    const [progressD, setProgressD] = useState(null)
+    function degrees_to_radians(degrees) {
+        var pi = Math.PI;
+        return degrees * (pi / 180);
+    }
+
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
         gsap.to(propA.current, {
@@ -21,7 +25,7 @@ const Verses = () => {
                 start: "top center",
                 end: "bottom top",
                 onUpdate: self => {
-                    setProgressA(1-self.progress+0.3)
+                    setProgressA(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)
                 }
             },
         })
@@ -32,7 +36,7 @@ const Verses = () => {
                 start: "top center",
                 end: "bottom top",
                 onUpdate: self => {
-                    setProgressB(1-self.progress+0.3)
+                    setProgressB(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)
                 }
             },
         })
@@ -43,7 +47,7 @@ const Verses = () => {
                 start: "top center",
                 end: "bottom top",
                 onUpdate: self => {
-                    setProgressC(1-self.progress+0.3)
+                    setProgressC(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)
                 }
             },
         })
@@ -54,20 +58,20 @@ const Verses = () => {
                 start: "top center",
                 end: "bottom top",
                 onUpdate: self => {
-                    setProgressD(1-self.progress+0.3)
+                    setProgressD(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)
                 }
             },
         })
-    }, [propA,propB,propC,propD])
-        return (
+    }, [propA, propB, propC, propD])
+    return (
 
-        <>
+        <React.Fragment>
             <div id="verse-container"
                 className={styles.verses}
-                
+
             >
                 <div ref={propA}
-                style={{opacity:progressA}} className={styles.center}>
+                    style={{ opacity: progressA }} className={styles.center}>
                     <p className={styles.verse}>
                         By the sun and its brightness, and the moon as it follows it, and the day as it unveils it, and the night as it conceals it! And by heaven and ˹the One˺ Who built it, and the earth and ˹the One˺ Who spread it! And by the soul and ˹the One˺ Who fashioned it, then with ˹the knowledge of˺ right and wrong inspired it! Successful indeed is the one who purifies their soul, and doomed is the one who corrupts it!
                 </p>
@@ -75,9 +79,9 @@ const Verses = () => {
                 </div>
             </div>
             <div
-            ref={propB}
-            style={{opacity:progressB}}
-            className={styles.verses}
+                ref={propB}
+                style={{ opacity: progressB }}
+                className={styles.verses}
             >
                 <div className={styles.center}>
                     <p className={styles.verse}>
@@ -87,9 +91,9 @@ const Verses = () => {
                 </div>
             </div>
             <div
-            ref={propC}
-            style={{opacity:progressC}}
-            className={styles.verses}
+                ref={propC}
+                style={{ opacity: progressC }}
+                className={styles.verses}
             >
                 <div className={styles.center}>
                     <p className={styles.verse}>
@@ -99,9 +103,9 @@ const Verses = () => {
                 </div>
             </div>
             <div
-            ref={propD}
-            style={{opacity:progressD}}
-            className={styles.verses}
+                ref={propD}
+                style={{ opacity: progressD }}
+                className={styles.verses}
             >
                 <div className={styles.center}>
                     <p className={styles.verse}>
@@ -110,7 +114,7 @@ const Verses = () => {
                     <h4 className={styles.reference} > <hr /> &nbsp;&nbsp; Chapter 24 | Verse 35 &nbsp;&nbsp; <hr /> </h4>
                 </div>
             </div>
-        </>
+        </React.Fragment>
 
     )
 }
