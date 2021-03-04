@@ -8,9 +8,9 @@ const Verses = () => {
     const propC = useRef(null)
     const propD = useRef(null)
     const [progressA, setProgressA] = useState(0)
-    const [progressB, setProgressB] = useState(0)
-    const [progressC, setProgressC] = useState(null)
-    const [progressD, setProgressD] = useState(null)
+    const [progressB, setProgressB] = useState(0.2)
+    const [progressC, setProgressC] = useState(0.2)
+    const [progressD, setProgressD] = useState(0.2)
     function degrees_to_radians(degrees) {
         var pi = Math.PI;
         return degrees * (pi / 180);
@@ -49,7 +49,7 @@ const Verses = () => {
                 end: "bottom top",
                 onUpdate: self => {
                     if(self.progress<=0.15){
-                        setProgressB(self.progress)
+                        setProgressB(self.progress+0.2)
                     }
                     else{setProgressB(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}
                 }
@@ -62,9 +62,10 @@ const Verses = () => {
                 start: "top center",
                 end: "bottom top",
                 onUpdate: self => { 
-                    if(self.progress<=0.1){
-                        setProgressC(1-self.progress-0.4)
-                    } 
+                    if(self.progress<=0.13){
+                        console.log(self.progress);
+                        setProgressC(self.progress+0.2)
+                    }
                     else{setProgressC(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}}
             },
         })
@@ -75,9 +76,10 @@ const Verses = () => {
                 start: "top center",
                 end: "bottom top",
                 onUpdate: self => {
-                    if(self.progress<=0.2){
-                        setProgressD(1-self.progress-0.4)
-                    } 
+                    if(self.progress<=0.11){
+                        console.log(self.progress);
+                        setProgressD(self.progress+0.2)
+                    }
                     else{setProgressD(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}
                 }
             },
