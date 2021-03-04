@@ -6,7 +6,7 @@ import "aos/dist/aos.css"
 const VersesMobile = () => {
     console.log(ScrollAnimation);
     useEffect(()=>{
-        Aos.init({duration:1000},[])
+        Aos.init({duration:500},[])
     },[])
     return (
         <div>

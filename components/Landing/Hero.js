@@ -13,7 +13,11 @@ const Hero = ()=>{
     }
     let [opacity,setOpacity] = useState(1)
     useEffect(()=>{
-        Aos.init({duration:2000},[])
+        Aos.init({
+            duration:2000,
+            once: false,
+            mirror: true, 
+        },[])
         const handleScroll = () =>{
             const y = window.scrollY
             setOpacity(1-(y/800))
