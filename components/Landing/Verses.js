@@ -7,8 +7,8 @@ const Verses = () => {
     const propB = useRef(null)
     const propC = useRef(null)
     const propD = useRef(null)
-    const [progressA, setProgressA] = useState(null)
-    const [progressB, setProgressB] = useState(null)
+    const [progressA, setProgressA] = useState(0)
+    const [progressB, setProgressB] = useState(0)
     const [progressC, setProgressC] = useState(null)
     const [progressD, setProgressD] = useState(null)
     function degrees_to_radians(degrees) {
@@ -23,9 +23,21 @@ const Verses = () => {
                 trigger: propA.current,
                 toggleActions: "restart restart restart restart",
                 start: "top center",
-                end: "bottom top",
+                end: "bottom center",
                 onUpdate: self => {
-                    setProgressA(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)
+                    if(progressA<=0.5 && progressA<1){ 
+                        setProgressA(1-(Math.cos(degrees_to_radians(self.progress * 90)*2)))
+                    }
+                    else if(progressA>1){ 
+                        setProgressA(1-(Math.cos(degrees_to_radians(self.progress * 90)*2)))  
+                    }
+                    else{
+                        setProgressA(Math.cos(degrees_to_radians(self.progress * 90)*2))
+                    }
+                    if(self.progress>=0.6){
+                        setProgressA(1-self.progress)
+                    }
+                   
                 }
             },
         })
@@ -36,7 +48,10 @@ const Verses = () => {
                 start: "top center",
                 end: "bottom top",
                 onUpdate: self => {
-                    setProgressB(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)
+                    if(self.progress<=0.15){
+                        setProgressB(self.progress)
+                    }
+                    else{setProgressB(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}
                 }
             },
         })
@@ -46,9 +61,11 @@ const Verses = () => {
                 toggleActions: "restart restart restart restart",
                 start: "top center",
                 end: "bottom top",
-                onUpdate: self => {
-                    setProgressC(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)
-                }
+                onUpdate: self => { 
+                    if(self.progress<=0.1){
+                        setProgressC(1-self.progress-0.4)
+                    } 
+                    else{setProgressC(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}}
             },
         })
         gsap.to(propD.current, {
@@ -58,11 +75,15 @@ const Verses = () => {
                 start: "top center",
                 end: "bottom top",
                 onUpdate: self => {
-                    setProgressD(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)
+                    if(self.progress<=0.2){
+                        setProgressD(1-self.progress-0.4)
+                    } 
+                    else{setProgressD(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}
                 }
             },
         })
     }, [propA, propB, propC, propD])
+    // console.log(progressB);
     return (
 
         <React.Fragment>
