@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import "animate.css/animate.min.css";
 import { gsap } from 'gsap'
 import { CSSPlugin } from 'gsap/CSSPlugin'
 gsap.registerPlugin(CSSPlugin)

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import styles from '../../styles/Verses.module.css'
 import gsap from 'gsap/gsap-core';
 import { ScrollTrigger } from 'gsap/all';
@@ -15,7 +15,6 @@ const Verses = () => {
         var pi = Math.PI;
         return degrees * (pi / 180);
     }
-
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
         gsap.to(propA.current, {
@@ -26,11 +25,11 @@ const Verses = () => {
                 end: "bottom top",
                 onUpdate: self => {
                     // console.log(self.progress);
-                    if(self.progress<=0.15){
-                        setProgressA(self.progress+0.6)
+                    if (self.progress <= 0.15) {
+                        setProgressA(self.progress + 0.6)
                     }
-                    else{setProgressA(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}
-                    if(self.progress === 0 || self.progress === 1){
+                    else { setProgressA(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2) }
+                    if (self.progress === 0 || self.progress === 1) {
                         setProgressA(0.15)
                     }
                 }
@@ -43,11 +42,11 @@ const Verses = () => {
                 start: "top center",
                 end: "bottom top",
                 onUpdate: self => {
-                    if(self.progress<=0.15){
-                        setProgressB(self.progress+0.6)
+                    if (self.progress <= 0.15) {
+                        setProgressB(self.progress + 0.6)
                     }
-                    else{setProgressB(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}
-                    if(self.progress === 0 || self.progress === 1){
+                    else { setProgressB(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2) }
+                    if (self.progress === 0 || self.progress === 1) {
                         setProgressB(0.05)
                     }
                 }
@@ -59,17 +58,17 @@ const Verses = () => {
                 toggleActions: "restart restart restart restart",
                 start: "top center",
                 end: "bottom top",
-                onUpdate: self => { 
-                    if(self.progress<=0.13){
+                onUpdate: self => {
+                    if (self.progress <= 0.13) {
                         console.log(self.progress);
-                        setProgressC(self.progress+0.6)
+                        setProgressC(self.progress + 0.6)
                     }
-                    else{setProgressC(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}
-                    if(self.progress === 0 || self.progress === 1){
+                    else { setProgressC(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2) }
+                    if (self.progress === 0 || self.progress === 1) {
                         setProgressC(0.05)
                     }
                 }
-                    
+
             },
         })
         gsap.to(propD.current, {
@@ -79,19 +78,18 @@ const Verses = () => {
                 start: "top center",
                 end: "bottom top",
                 onUpdate: self => {
-                    if(self.progress<=0.11){
+                    if (self.progress <= 0.11) {
                         console.log(self.progress);
-                        setProgressD(self.progress+0.6)
+                        setProgressD(self.progress + 0.6)
                     }
-                    else{setProgressD(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}
-                    if(self.progress === 0 || self.progress === 1){
+                    else { setProgressD(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2) }
+                    if (self.progress === 0 || self.progress === 1) {
                         setProgressD(0.05)
                     }
                 }
             },
         })
     }, [propA, propB, propC, propD])
-    console.log(progressA);
     return (
 
         <React.Fragment>
@@ -101,11 +99,11 @@ const Verses = () => {
             >
                 <div className={styles.centerA}>
                     <div ref={propA}
-                    style={{ opacity: progressA }}  >
-                    <p className={styles.verse}>
-                        By the sun and its brightness, and the moon as it follows it, and the day as it unveils it, and the night as it conceals it! And by heaven and ˹the One˺ Who built it, and the earth and ˹the One˺ Who spread it! And by the soul and ˹the One˺ Who fashioned it, then with ˹the knowledge of˺ right and wrong inspired it! Successful indeed is the one who purifies their soul, and doomed is the one who corrupts it!
+                        style={{ opacity: progressA }}  >
+                        <p className={styles.verse}>
+                            By the sun and its brightness, and the moon as it follows it, and the day as it unveils it, and the night as it conceals it! And by heaven and ˹the One˺ Who built it, and the earth and ˹the One˺ Who spread it! And by the soul and ˹the One˺ Who fashioned it, then with ˹the knowledge of˺ right and wrong inspired it! Successful indeed is the one who purifies their soul, and doomed is the one who corrupts it!
                 </p>
-                    <h4 className={styles.reference} > <hr /> &nbsp;&nbsp; Chapter 91 | Verse 1-10 &nbsp;&nbsp; <hr /> </h4>
+                        <h4 className={styles.reference} > <hr /> &nbsp;&nbsp; Chapter 91 | Verse 1-10 &nbsp;&nbsp; <hr /> </h4>
                     </div>
                 </div>
             </div>
