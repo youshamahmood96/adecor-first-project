@@ -7,10 +7,10 @@ const Verses = () => {
     const propB = useRef(null)
     const propC = useRef(null)
     const propD = useRef(null)
-    const [progressA, setProgressA] = useState(0.2)
-    const [progressB, setProgressB] = useState(0.2)
-    const [progressC, setProgressC] = useState(0.2)
-    const [progressD, setProgressD] = useState(0.2)
+    const [progressA, setProgressA] = useState(0)
+    const [progressB, setProgressB] = useState(0)
+    const [progressC, setProgressC] = useState(0)
+    const [progressD, setProgressD] = useState(0)
     function degrees_to_radians(degrees) {
         var pi = Math.PI;
         return degrees * (pi / 180);
@@ -23,14 +23,15 @@ const Verses = () => {
                 trigger: propA.current,
                 toggleActions: "restart restart restart restart",
                 start: "top center",
-                end: "bottom center",
+                end: "bottom top",
                 onUpdate: self => {
                     console.log(self.progress);
-                    if(self.progress>=0.13){
-                        setProgressA(self.progress*2)
+                    if(self.progress<=0.15){
+                        setProgressA(self.progress+0.6)
                     }
-                    if(self.progress>=0.68){
-                        setProgressA(1-self.progress+0.3)
+                    else{setProgressA(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}
+                    if(self.progress === 0 || self.progress === 1){
+                        setProgressA(0)
                     }
                 }
             },
@@ -46,6 +47,9 @@ const Verses = () => {
                         setProgressB(self.progress+0.6)
                     }
                     else{setProgressB(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}
+                    if(self.progress === 0 || self.progress === 1){
+                        setProgressB(0)
+                    }
                 }
             },
         })
@@ -60,7 +64,12 @@ const Verses = () => {
                         console.log(self.progress);
                         setProgressC(self.progress+0.6)
                     }
-                    else{setProgressC(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}}
+                    else{setProgressC(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}
+                    if(self.progress === 0 || self.progress === 1){
+                        setProgressC(0)
+                    }
+                }
+                    
             },
         })
         gsap.to(propD.current, {
@@ -75,6 +84,9 @@ const Verses = () => {
                         setProgressD(self.progress+0.6)
                     }
                     else{setProgressD(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}
+                    if(self.progress === 0 || self.progress === 1){
+                        setProgressD(0)
+                    }
                 }
             },
         })
@@ -88,7 +100,7 @@ const Verses = () => {
 
             >
                 <div ref={propA}
-                    style={{ opacity: progressA }} className={styles.center}>
+                    style={{ opacity: progressA }} className={styles.centerA}>
                     <p className={styles.verse}>
                         By the sun and its brightness, and the moon as it follows it, and the day as it unveils it, and the night as it conceals it! And by heaven and ˹the One˺ Who built it, and the earth and ˹the One˺ Who spread it! And by the soul and ˹the One˺ Who fashioned it, then with ˹the knowledge of˺ right and wrong inspired it! Successful indeed is the one who purifies their soul, and doomed is the one who corrupts it!
                 </p>

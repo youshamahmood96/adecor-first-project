@@ -9,6 +9,13 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+.centerA{
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
 .verses h4{
     font-weight:300;
 }
