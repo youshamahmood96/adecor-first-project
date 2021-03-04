@@ -7,7 +7,7 @@ const Verses = () => {
     const propB = useRef(null)
     const propC = useRef(null)
     const propD = useRef(null)
-    const [progressA, setProgressA] = useState(0)
+    const [progressA, setProgressA] = useState(0.15)
     const [progressB, setProgressB] = useState(0)
     const [progressC, setProgressC] = useState(0)
     const [progressD, setProgressD] = useState(0)
@@ -25,13 +25,13 @@ const Verses = () => {
                 start: "top center",
                 end: "bottom top",
                 onUpdate: self => {
-                    console.log(self.progress);
+                    // console.log(self.progress);
                     if(self.progress<=0.15){
                         setProgressA(self.progress+0.6)
                     }
                     else{setProgressA(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}
                     if(self.progress === 0 || self.progress === 1){
-                        setProgressA(0)
+                        setProgressA(0.15)
                     }
                 }
             },
@@ -48,7 +48,7 @@ const Verses = () => {
                     }
                     else{setProgressB(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}
                     if(self.progress === 0 || self.progress === 1){
-                        setProgressB(0)
+                        setProgressB(0.05)
                     }
                 }
             },
@@ -66,7 +66,7 @@ const Verses = () => {
                     }
                     else{setProgressC(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}
                     if(self.progress === 0 || self.progress === 1){
-                        setProgressC(0)
+                        setProgressC(0.05)
                     }
                 }
                     
@@ -85,13 +85,13 @@ const Verses = () => {
                     }
                     else{setProgressD(Math.cos(degrees_to_radians(self.progress * 90)*2)+0.2)}
                     if(self.progress === 0 || self.progress === 1){
-                        setProgressD(0)
+                        setProgressD(0.05)
                     }
                 }
             },
         })
     }, [propA, propB, propC, propD])
-    // console.log(progressB);
+    console.log(progressA);
     return (
 
         <React.Fragment>
@@ -99,12 +99,14 @@ const Verses = () => {
                 className={styles.verses}
 
             >
-                <div ref={propA}
-                    style={{ opacity: progressA }} className={styles.centerA}>
+                <div className={styles.centerA}>
+                    <div ref={propA}
+                    style={{ opacity: progressA }}  >
                     <p className={styles.verse}>
                         By the sun and its brightness, and the moon as it follows it, and the day as it unveils it, and the night as it conceals it! And by heaven and ˹the One˺ Who built it, and the earth and ˹the One˺ Who spread it! And by the soul and ˹the One˺ Who fashioned it, then with ˹the knowledge of˺ right and wrong inspired it! Successful indeed is the one who purifies their soul, and doomed is the one who corrupts it!
                 </p>
                     <h4 className={styles.reference} > <hr /> &nbsp;&nbsp; Chapter 91 | Verse 1-10 &nbsp;&nbsp; <hr /> </h4>
+                    </div>
                 </div>
             </div>
             <div
