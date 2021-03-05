@@ -7,7 +7,6 @@ const Verses = () => {
     const propB = useRef(null)
     const propC = useRef(null)
     const propD = useRef(null)
-    console.log(propA);
     const [progressA, setProgressA] = useState(0.15)
     const [progressB, setProgressB] = useState(0)
     const [progressC, setProgressC] = useState(0)

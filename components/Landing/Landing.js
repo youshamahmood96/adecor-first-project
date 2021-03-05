@@ -4,9 +4,14 @@ import Verses from './Verses'
 import VersesMobile from './VersesMobile'
 import Vox from './Vox'
 const Landing = ()=>{
+  const setInitialWidth=()=>{
+    if(typeof window !=='undefined'){
+      return window.innerWidth
+    }
+  }
     const [dimensions, setDimensions] = useState({ 
         height: undefined,
-        width: 680
+        width: setInitialWidth()
       })
       useEffect(()=>{
         if(typeof window !=='undefined')
@@ -28,6 +33,7 @@ const Landing = ()=>{
         }
       },[])
       const {width} = dimensions
+      console.log(width)
     return(
         <>
         <Hero></Hero>
