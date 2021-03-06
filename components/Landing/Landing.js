@@ -2,20 +2,18 @@ import { useEffect, useState } from 'react'
 import Mobile from './Mobile'
 import Desktop from './Desktop'
 const Landing = ()=>{
-  const setInitialWidth=()=>{
-    if(typeof window !=='undefined'){
-      console.log(window.innerWidth);
-      return window.innerWidth
-    }
-  }
     const [dimensions, setDimensions] = useState({ 
         height: undefined,
-        width: 1000
+        width: undefined
       })
       const {width} = dimensions
       useEffect(()=>{
         if(typeof window !=='undefined')
         {
+          setDimensions({
+            height: window.innerHeight,
+            width: window.innerWidth
+          })
             function handleResize() {
                 setDimensions({
                   height: window.innerHeight,
@@ -32,6 +30,7 @@ const Landing = ()=>{
           }
         }
       },[width])
+      console.log(width);
     return(
         <>
         {width>=780 ? <Desktop></Desktop>:<Mobile></Mobile>}

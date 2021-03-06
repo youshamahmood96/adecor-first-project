@@ -9,7 +9,7 @@ const Verses = () => {
     const propB = useRef(null)
     const propC = useRef(null)
     const propD = useRef(null)
-    const [progressA, setProgressA] = useState(0)
+    const [progressA, setProgressA] = useState(0.05)
     const [progressB, setProgressB] = useState(0)
     const [progressC, setProgressC] = useState(0)
     const [progressD, setProgressD] = useState(0)
@@ -26,7 +26,6 @@ const Verses = () => {
                 start: "top center",
                 end: "bottom top",
                 onUpdate: self => {
-                    console.log(self.progress);
                     if(self.progress <=0.9 && self.progress>=0.3){
                         setProgressA(self.progress-0.1)
                     }
