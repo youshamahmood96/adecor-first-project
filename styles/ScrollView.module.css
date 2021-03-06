@@ -3,7 +3,32 @@
     min-width: 100vw;
     min-height: 100vh;
 }
-
+.separator h4{
+    font-weight:800;
+    font-size:25px;
+    font-family:'Katibeh', cursive;
+}
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .separator::before,
+  .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #000;
+    padding-top:8px;
+  }
+  
+  .separator:not(:empty)::before {
+    margin-right: .5em;
+  }
+  
+  .separator:not(:empty)::after {
+    margin-left: .5em;
+  }
 .swipeView {
     overflow-x: auto;
     overflow-y: hidden;

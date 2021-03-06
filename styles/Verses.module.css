@@ -29,14 +29,52 @@
     display: flex;
     font-size:25px;
     flex-direction: row; 
+    border:none;
 }
 .reference:before, 
 .reference:after { 
-    content: ""; 
+    content: " "; 
     flex: 1 1; 
     border-top: 1px solid #000000; 
     margin: auto; 
 } 
+.separator h4{
+    font-weight:800;
+    font-size:25px;
+    font-family:'Katibeh', cursive;
+}
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .separator::before,
+  .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #000;
+    padding-top:8px;
+  }
+  
+  .separator:not(:empty)::before {
+    margin-right: .5em;
+  }
+  
+  .separator:not(:empty)::after {
+    margin-left: .5em;
+  }
+.magical{
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.1em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+    cursor:pointer
+}
+.magical:hover{
+    background-size: 100% 88%;
+}
 @media only screen and (min-width: 681px) {
     .verses{
         margin:200px;

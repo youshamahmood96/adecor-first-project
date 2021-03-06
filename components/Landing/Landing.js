@@ -30,7 +30,6 @@ const Landing = ()=>{
           }
         }
       },[width])
-      console.log(width);
     return(
         <>
         {width>=780 ? <Desktop></Desktop>:<Mobile></Mobile>}
