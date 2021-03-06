@@ -1,5 +1,7 @@
 .scrollView{
     overflow-y:hidden;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 .swipeView {
@@ -35,6 +37,13 @@
     font-size:25px;
     flex-direction: row; 
 }
+.reference:before, 
+.reference:after { 
+    content: ""; 
+    flex: 1 1; 
+    border-top: 1px solid #000000; 
+    margin: auto; 
+} 
 .wrapper{
     position:relative;
     min-width: 100vw;

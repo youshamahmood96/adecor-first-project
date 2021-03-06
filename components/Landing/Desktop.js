@@ -1,11 +1,10 @@
 import React from "react";
 import Hero from './Hero'
-import Verses from './Verses'
+import VersesTest from './VersesTest'
 const Desktop = () => {
     return (
         <React.Fragment>
-        <Hero></Hero>
-        <Verses></Verses>
+        <VersesTest></VersesTest>
         </React.Fragment>
     );
 };

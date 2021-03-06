@@ -39,17 +39,16 @@
     font-weight:var(--fontWeightHeader);
 }
 .heroButton{
-    height:48px;
-    width:154px;
+    height:36px;
+    width:108px;
     font-family: 'Fondamento', cursive;
     font-weight:400;
-    line-height:33.21px;
-    font-size:24px;
+    font-size:16px;
     background-color:#FFFFFF;
     border: 2px solid #000000;
     border-radius: 16px;
     position:absolute;
-    bottom:-24px;
+    bottom:-18px;
     left:50%;
     transform:translateX(-50%);
     z-index:1; 
@@ -71,15 +70,17 @@
     font-weight:var(--fontWeightHeader);
 }
 .bottomMobile img{
+    width:50px;
+    height:60px;
     padding-bottom:20px;
     position: absolute;
-    top: 85%;
-    left: 50%;
+    top: 95%;
+    right:-2%;
     transform: translate(-50%, -50%);
     cursor: pointer;
 }
 @media only screen and (max-width: 780px) {
     #hero h1{
-        font-size:45px;
+        font-size:50px;
     }
 }
