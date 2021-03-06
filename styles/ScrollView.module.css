@@ -21,6 +21,7 @@
         flex:0 0 100vw;
         scroll-snap-align: start;
         margin:20px !important;
+        overflow-y:hidden !important;
   }
   .verse{
     font-size:20px;

@@ -12,22 +12,17 @@ const ScrollView = () => {
         <HeroMobile></HeroMobile>
         </div>
             <div className={styles.centerM}>
-                <div className={styles.wrapper} >
-                     
-                    <div className={styles.text} >
+            <div style={{marginTop:'20vh'}} >
                     <p className={styles.verse}>
                     By the sun and its brightness, and the moon as it follows it, and the day as it unveils it, and the night as it conceals it! And by heaven and ˹the One˺ Who built it, and the earth and ˹the One˺ Who spread it! And by the soul and ˹the One˺ Who fashioned it, then with ˹the knowledge of˺ right and wrong inspired it! Successful indeed is the one who purifies their soul, and doomed is the one who corrupts it!
         </p>
                 <h4 className={styles.reference} > <hr /> &nbsp;&nbsp; Chapter 91 | Verse 1-10 &nbsp;&nbsp; <hr /> </h4>
-                    </div>
-                     
-                    
-                </div>
+                </div> 
             </div>
        
             <div className={styles.centerM}>
     
-              <div style={{marginTop:'25vh'}} >
+              <div style={{marginTop:'30vh'}} >
               <p className={styles.verse}>
               For indeed, We ˹alone˺ created humans from a drop of mixed fluids, ˹in order˺ to test them, so We made them hear and see. We already showed them the Way, whether they ˹choose to˺ be grateful or ungrateful.
       </p>
@@ -40,7 +35,7 @@ const ScrollView = () => {
         >
             <div className={styles.centerM}>
             <div>
-            <div style={{marginTop:'25vh'}} >
+            <div style={{marginTop:'30vh'}} >
                 <p className={styles.verse}>
                     It is We Who created them and perfected their ˹physical˺ form. But if We will, We can easily replace them with others. Surely this is a reminder. So let whoever wills take the ˹Right˺ Way to their Lord. But you cannot will ˹to do so˺ unless Allah wills. Indeed, Allah is All-Knowing, All-Wise
             </p>
