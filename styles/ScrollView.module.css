@@ -1,4 +1,6 @@
-
+.scrollView{
+    overflow-y:hidden;
+}
 
 .swipeView {
     overflow-x: auto;
@@ -14,22 +16,33 @@
       margin:2px;
   }
   .centerM{
-        min-width: 80vw;
+        min-width: 100vw;
         min-height: 100vh;
-        flex:0 0 380px;
+        flex:0 0 100vw;
         scroll-snap-align: start;
         margin:20px !important;
   }
   .verse{
-    font-size:25px;
+    font-size:20px;
     font-weight:500;
     font-family: 'Sorts Mill Goudy', serif;
-    margin:10px !important;
+    margin:20px !important;
 }
 .reference{
     font-family:'Katibeh', cursive;
     display: flex;
     font-size:25px;
     flex-direction: row; 
+}
+.wrapper{
+    position:relative;
+    min-width: 100vw;
+        min-height: 100vh;
+}
+.text{
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
   

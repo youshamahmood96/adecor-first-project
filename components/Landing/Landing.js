@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react'
-import Hero from './Hero'
-import ScrollView from './ScrollView'
-import Verses from './Verses'
-import VersesMobile from './VersesMobile'
-import Vox from './Vox'
+import Mobile from './Mobile'
+import Desktop from './Desktop'
 const Landing = ()=>{
   const setInitialWidth=()=>{
     if(typeof window !=='undefined'){
@@ -37,8 +34,7 @@ const Landing = ()=>{
       },[width])
     return(
         <>
-        <Hero></Hero>
-        {width>=780 ? <Verses></Verses>:<ScrollView></ScrollView>}
+        {width>=780 ? <Desktop></Desktop>:<Mobile></Mobile>}
         </>
     )
 }

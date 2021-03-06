@@ -1,9 +1,8 @@
 import styles from '../../styles/Hero.module.css'
 import { useEffect, useState } from 'react'
-import { scroller } from 'react-scroll';
 import Aos from 'aos';
 import "aos/dist/aos.css"
-const Hero = ()=>{
+const HeroMobile = ()=>{
     const smoothScroll = (id) => {
         scroller.scrollTo(id, {
             smooth: true,
@@ -33,15 +32,14 @@ const Hero = ()=>{
         <div className={styles.top}>
         <h1>God Guides</h1>
         <button className={styles.heroButton} >and the</button>
-        <img  style={{color:'white'}} src="/swipe-left-white.svg" alt=""/>
         </div>
-        <div className={styles.bottom}>
+        <div className={styles.bottomMobile}>
         <h1>Devil Divides</h1>
-        <img  style={{color:'white !important'}} src="/scroll-btn-white.png" onClick={()=>smoothScroll('verse-container')}  alt=""/>
+        <img  src="/swipe-left-white.svg"   alt=""/>
         </div>
         </div>
         </div>
         
     )
 }
-export default Hero 
+export default HeroMobile

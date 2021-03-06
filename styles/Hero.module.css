@@ -54,6 +54,32 @@
     transform:translateX(-50%);
     z-index:1; 
 }
-.scrollButton{
-    
+.bottomMobile{
+    height:50vh;
+    background-color:var(--primary);
+    position:relative;
+}
+.bottomMobile h1{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color:white;
+    font-size:var(--fontHeader);
+    font-weight:var(--fontWeightHeader);
+}
+.bottomMobile img{
+    padding-bottom:30px;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+@media only screen and (max-width: 780px) {
+    #hero h1{
+        font-size:45px;
+    }
 }
