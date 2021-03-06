@@ -1,18 +1,21 @@
 import { useEffect, useState } from 'react'
 import Hero from './Hero'
+import ScrollView from './ScrollView'
 import Verses from './Verses'
 import VersesMobile from './VersesMobile'
 import Vox from './Vox'
 const Landing = ()=>{
   const setInitialWidth=()=>{
     if(typeof window !=='undefined'){
+      console.log(window.innerWidth);
       return window.innerWidth
     }
   }
     const [dimensions, setDimensions] = useState({ 
         height: undefined,
-        width: setInitialWidth()
+        width: 1000
       })
+      const {width} = dimensions
       useEffect(()=>{
         if(typeof window !=='undefined')
         {
@@ -31,13 +34,11 @@ const Landing = ()=>{
               
           }
         }
-      },[])
-      const {width} = dimensions
-      console.log(width)
+      },[width])
     return(
         <>
         <Hero></Hero>
-        {width>=780 ? <Verses></Verses>:<Vox></Vox>}
+        {width>=780 ? <Verses></Verses>:<ScrollView></ScrollView>}
         </>
     )
 }
