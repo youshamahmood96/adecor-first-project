@@ -14,7 +14,19 @@
     text-align: center;
     margin:20px;
   }
-  
+  .magical{
+    border-bottom:2px solid black;
+    background-repeat: no-repeat;
+    background-size: 100% 0.1em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+    cursor:pointer;
+    transition:var(--animate)
+}
+.magical:hover{
+    background-color: black;
+    color:white;
+}
   .separator::before,
   .separator::after {
     content: '';

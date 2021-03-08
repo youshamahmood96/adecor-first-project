@@ -1,8 +1,72 @@
 import styles from "../../styles/ScrollView.module.css"
 import HeroMobile from "./HeroMobile";
+import { makeStyles } from '@material-ui/core/styles';
+import Modal from '@material-ui/core/Modal';
+import {AiOutlineCloseCircle} from 'react-icons/ai';
+import React from 'react'
 const ScrollView = () => {
+    function getModalStyle() {
+        const top = 50 
+        const left = 50
+      
+        return {
+          top: `${top}%`,
+          left: `${left}%`,
+          transform: `translate(-${top}%, -${left}%)`,
+        };
+      }
+      
+      const useStyles = makeStyles((theme) => ({
+        paper: {
+          position: 'absolute',
+          width: 200,
+          backgroundColor: theme.palette.background.paper,
+          border: 'none',
+          outline:'none',
+          borderRadius:'10px', 
+          padding: theme.spacing(2, 4, 3),
+        },
+        close:{
+            position: 'relative',
+            marginLeft:'200px',
+            cursor:'pointer',
+            height:'25px',
+            width:'25px'
+        },
+      }));
+      
+        const classes = useStyles();
+        const [modalStyle] = React.useState(getModalStyle);
+        const [open, setOpen] = React.useState(false);
+      
+        const handleOpen = () => {
+          setOpen(true);
+        };
+      
+        const handleClose = () => {
+          setOpen(false);
+        };
+      
+        const body = (
+          <div style={modalStyle} className={classes.paper}>
+          <AiOutlineCloseCircle className={classes.close} onClick={handleClose} />
+            <h2 id="simple-modal-title">Text about sun</h2>
+            <p id="simple-modal-description">
+              More text about sun
+              
+            </p>
+          </div>
+        );
     return (
         <div id={styles.scrollView} >
+        <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="simple-modal-title"
+        aria-describedby="simple-modal-description"
+      >
+        {body}
+      </Modal>
 
             <div
                 className={styles.swipeView}
@@ -38,7 +102,7 @@ const ScrollView = () => {
                         <div>
                             <div style={{ marginTop: '30vh' }} >
                                 <p className={styles.verse}>
-                                    It is We Who created them and perfected their ˹physical˺ form. But if We will, We can easily replace them with others. Surely this is a reminder. So let whoever wills take the ˹Right˺ Way to their Lord. But you cannot will ˹to do so˺ unless Allah wills. Indeed, Allah is All-Knowing, All-Wise
+                                    It is <span onClick={handleOpen} className={styles.magical} >We</span> Who created them and perfected their ˹physical˺ form. But if We will, We can easily replace them with others. Surely this is a reminder. So let whoever wills take the ˹Right˺ Way to their Lord. But you cannot will ˹to do so˺ unless <span onClick={handleOpen} className={styles.magical} > Allah </span> wills. Indeed, Allah is All-Knowing, All-Wise
             </p>
                                 <div className={styles.separator} > <h4>Chapter 76 | Verse 28-30</h4>  </div>
                             </div>
@@ -61,7 +125,7 @@ const ScrollView = () => {
                     <div >
                         <div style={{ marginTop: '20vh' }} >
                             <p className={styles.verse}>
-                            This is the Book! There is no doubt about it—a guide for those mindful ˹of Allah˺, who believe in the unseen, establish prayer, and donate from what We have provided for them, and who believe in what has been revealed to you ˹O Prophet˺ and what was revealed before you, and have sure faith in the Hereafter. It is they who are ˹truly˺ guided by their Lord, and it is they who will be successful. As for those who persist in disbelief, it is the same whether you warn them or not—they will never believe. Allah has sealed their hearts and their hearing, and their sight is covered. They will suffer a tremendous punishment. And there are some who say, “We believe in Allah and the Last Day,” yet they are not ˹true˺ believers.
+                            This is the <span onClick={handleOpen} className={styles.magical} >Book</span>! There is no doubt about it—a guide for those mindful ˹of Allah˺, who believe in the unseen, establish prayer, and donate from what We have provided for them, and who believe in what has been revealed to you ˹O <span onClick={handleOpen} className={styles.magical} >Prophet</span>˺ and what was revealed before you, and have sure faith in the Hereafter. It is they who are ˹truly˺ guided by their Lord, and it is they who will be successful. As for those who persist in disbelief, it is the same whether you warn them or not—they will never believe. Allah has sealed their hearts and their hearing, and their sight is covered. They will suffer a tremendous punishment. And there are some who say, “We believe in Allah and the Last Day,” yet they are not ˹true˺ believers.
             </p>
                             <div className={styles.separator} > <h4> Chapter 2 | Verse 2-8</h4>  </div>
                         </div>
@@ -71,7 +135,7 @@ const ScrollView = () => {
                     <div >
                         <div style={{ marginTop: '20vh' }} >
                             <p className={styles.verse}>
-                            ˹It is˺ Allah ˹Who˺ has sent down the best message—a Book of perfect consistency and repeated lessons—which causes the skin ˹and hearts˺ of those who fear their Lord to tremble, then their skin and hearts soften at the mention of ˹the mercy of˺ Allah. That is the guidance of Allah, through which He guides whoever He wills. But whoever Allah leaves to stray will be left with no guide. 
+                            ˹It is˺ Allah ˹Who˺ has sent down the best message—a Book of perfect consistency and repeated lessons—which causes the skin ˹and hearts˺ of those who fear their Lord to tremble, then their skin and hearts soften at the mention of ˹the mercy of˺ Allah. That is the guidance of Allah, through which He guides whoever He wills. But whoever Allah <span onClick={handleOpen} className={styles.magical} >leaves to stray</span> will be left with no guide. 
             </p>
                             <div className={styles.separator} > <h4>Chapter 39 | Verse 23</h4>  </div>
                         </div>
@@ -81,7 +145,7 @@ const ScrollView = () => {
                     <div >
                         <div style={{ marginTop: '20vh' }} >
                             <p className={styles.verse}>
-                            It is not ˹possible˺ for a human being to have Allah communicate with them, except through inspiration, or from behind a veil, or by sending a messenger-angel to reveal whatever He wills by His permission. He is surely Most High, All-Wise. And so We have sent to you ˹O Prophet˺ a revelation by Our command. You did not know of ˹this˺ Book and faith ˹before˺. But We have made it a light, by which We guide whoever We will of Our servants. And you are truly leading ˹all˺ to the Straight Path—the Path of Allah, to Whom belongs whatever is in the heavens and whatever is on the earth. Surely to Allah all matters will return ˹for judgment˺. 
+                            It is not ˹possible˺ for a human being to have Allah communicate with them, except through inspiration, or from behind a veil, or by sending a messenger-angel to reveal whatever He wills by His permission. He is surely <span onClick={handleOpen} className={styles.magical} >Most High</span>. And so We have sent to you ˹O Prophet˺ a revelation by Our command. You did not know of ˹this˺ Book and faith ˹before˺. But We have made it a light, by which We guide whoever We will of Our servants. And you are truly leading ˹all˺ to the Straight Path—the Path of Allah, to Whom belongs whatever is in the heavens and whatever is on the earth. Surely to Allah all matters will return ˹for judgment˺. 
             </p>
                             <div className={styles.separator} > <h4>Chapter 42 | Verse 51-53</h4>  </div>
                         </div>
@@ -111,7 +175,7 @@ const ScrollView = () => {
                     <div >
                         <div style={{ marginTop: '20vh' }} >
                             <p className={styles.verse}>
-                            O People of the Book! Now Our Messenger has come to you, revealing much of what you have hidden of the Scriptures and disregarding much. There certainly has come to you from Allah a light and a clear Book through which Allah guides those who seek His pleasure to the ways of peace, brings them out of darkness and into light by His Will, and guides them to the Straight Path.
+                            O <span onClick={handleOpen} className={styles.magical} >People of the Book</span>! Now <span onClick={handleOpen} className={styles.magical} >Our Messenger</span> has come to you, revealing much of what you have hidden of the Scriptures and disregarding much. There certainly has come to you from Allah a light and a clear Book through which Allah guides those who seek His pleasure to the ways of peace, brings them out of darkness and into light by His Will, and guides them to the Straight Path.
             </p>
                             <div className={styles.separator} > <h4>Chapter 5 | Verse 15-16</h4>  </div>
                         </div>
