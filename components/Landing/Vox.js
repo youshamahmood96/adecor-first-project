@@ -29,7 +29,6 @@ const Vox = () => {
             }
         })
     },[ourRefA])
-    console.log(progress);
     return (
      <div>
      <Hero></Hero>

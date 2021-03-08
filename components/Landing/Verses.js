@@ -24,7 +24,6 @@ const Verses = () => {
                 start: "top center",
                 end: "bottom top",
                 onUpdate: self => {
-                    // console.log(self.progress);
                     if (self.progress <= 0.15) {
                         setProgressA(self.progress + 0.6)
                     }
@@ -60,7 +59,6 @@ const Verses = () => {
                 end: "bottom top",
                 onUpdate: self => {
                     if (self.progress <= 0.13) {
-                        console.log(self.progress);
                         setProgressC(self.progress + 0.6)
                     }
                     else { setProgressC(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2) }
@@ -79,7 +77,6 @@ const Verses = () => {
                 end: "bottom top",
                 onUpdate: self => {
                     if (self.progress <= 0.11) {
-                        console.log(self.progress);
                         setProgressD(self.progress + 0.6)
                     }
                     else { setProgressD(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2) }

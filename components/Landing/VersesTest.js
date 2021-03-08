@@ -101,7 +101,6 @@ const Verses = () => {
                         setProgressD(Math.abs(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2))
                     }
                     if (self.progress <= 0.13) {
-                        console.log(self.progress);
                         setProgressC(self.progress + 0.6)
                     }
                     else { setProgressC(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2) }
@@ -123,7 +122,6 @@ const Verses = () => {
                         setProgressE(Math.abs(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2))
                     }
                     if (self.progress <= 0.11) {
-                        console.log(self.progress);
                         setProgressD(self.progress + 0.6)
                     }
                     else { setProgressD(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2) }
@@ -144,7 +142,6 @@ const Verses = () => {
                         setProgressF(Math.abs(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2))
                     }
                     if (self.progress <= 0.13) {
-                        console.log(self.progress);
                         setProgressE(self.progress + 0.6)
                     }
                     else { setProgressE(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2) }
@@ -187,7 +184,6 @@ const Verses = () => {
                         setProgressH(Math.abs(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2))
                     }
                     if (self.progress <= 0.13) {
-                        console.log(self.progress);
                         setProgressG(self.progress + 0.6)
                     }
                     else { setProgressG(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2) }
@@ -209,7 +205,6 @@ const Verses = () => {
                         setProgressI(Math.abs(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2))
                     }
                     if (self.progress <= 0.13) {
-                        console.log(self.progress);
                         setProgressH(self.progress + 0.6)
                     }
                     else { setProgressH(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2) }
@@ -252,7 +247,6 @@ const Verses = () => {
                         setProgressK(Math.abs(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2))
                     }
                     if (self.progress <= 0.13) {
-                        console.log(self.progress);
                         setProgressJ(self.progress + 0.6)
                     }
                     else { setProgressJ(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2) }
@@ -274,7 +268,6 @@ const Verses = () => {
                         setProgressL(Math.abs(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2))
                     }
                     if (self.progress <= 0.13) {
-                        console.log(self.progress);
                         setProgressK(self.progress + 0.6)
                     }
                     else { setProgressK(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2) }
@@ -296,7 +289,6 @@ const Verses = () => {
                         setProgressM(Math.abs(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2))
                     }
                     if (self.progress <= 0.13) {
-                        console.log(self.progress);
                         setProgressL(self.progress + 0.6)
                     }
                     else { setProgressL(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2) }
@@ -318,7 +310,6 @@ const Verses = () => {
                         setProgressN(Math.abs(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2))
                     }
                     if (self.progress <= 0.13) {
-                        console.log(self.progress);
                         setProgressM(self.progress + 0.6)
                     }
                     else { setProgressM(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2) }
@@ -337,7 +328,6 @@ const Verses = () => {
                 end: "bottom top",
                 onUpdate: self => {
                     if (self.progress <= 0.13) {
-                        console.log(self.progress);
                         setProgressN(self.progress + 0.6)
                     }
                     else { setProgressN(Math.cos(degrees_to_radians(self.progress * 90) * 2) + 0.2) }
