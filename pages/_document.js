@@ -25,8 +25,8 @@ class MyDocument extends Document {
             gtag('js', new Date());
             gtag('config', 'G-6EEDH3LWYT');
         `,
-    }}
-  />
+    }}/>
+    <script type='text/javascript' src='../seo.js' ></script>
         </Head>
         <body>
           <Main />
