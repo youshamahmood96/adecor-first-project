@@ -97,7 +97,8 @@
   }
 .magical{
     line-height: 50px;
-    border-bottom:1px solid black;
+    padding:0;
+    border-bottom:2px solid black;
     background-repeat: no-repeat;
     background-size: 100% 0.2em;
     background-position: 0 80%;
