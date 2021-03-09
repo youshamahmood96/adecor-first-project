@@ -96,10 +96,11 @@
     margin-left: .5em;
   }
 .magical{
-    border-bottom:2px solid black;
+    line-height: 50px;
+    border-bottom:1px solid black;
     background-repeat: no-repeat;
-    background-size: 100% 0.1em;
-    background-position: 0 88%;
+    background-size: 100% 0.2em;
+    background-position: 0 80%;
     transition: background-size 0.25s ease-in;
     cursor:pointer;
     transition:var(--animate)

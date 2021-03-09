@@ -441,7 +441,7 @@ const Verses = () => {
             >
                 <div className={styles.center}>
                     <p className={styles.verse}>
-                        It is   <span onClick={handleOpen} className={styles.magical} >We</span>  Who created them and perfected their ˹physical˺ form. But if We will, We can easily replace them with others. Surely this is a reminder. So let whoever wills take the ˹Right˺ Way to their Lord. But you cannot will ˹to do so˺ unless <span onClick={handleOpen} className={styles.magical} > Allah</span> wills. Indeed, Allah is All-Knowing, All-Wise
+                        It is   <span onClick={handleOpen} className={styles.magical} >We</span>  Who created them and perfected their ˹physical˺ form. But if We will, We can easily replace them with others. Surely this is a reminder. So let whoever wills take the ˹Right˺ Way to their Lord. But you cannot will ˹to do so˺ unless <span onClick={handleOpen} className={styles.magical} > Allah</span> wills. Indeed, Allah is All-Knowing, All-Wise.
                 </p>
                     <div className={styles.separator} > <h4>Chapter 76 | Verse 28-30</h4>  </div>
 
@@ -480,7 +480,7 @@ const Verses = () => {
             >
                 <div className={styles.center}>
                     <p className={styles.verse}>
-                    ˹It is˺ Allah ˹Who˺ has sent down the best message—a Book of perfect consistency and repeated lessons—which causes the skin ˹and hearts˺ of those who fear their Lord to tremble, then their skin and hearts soften at the mention of ˹the mercy of˺ Allah. That is the guidance of Allah, through which He guides whoever He wills. But whoever Allah<span onClick={handleOpen} className={styles.magical} >leaves to stray</span> will be left with no guide.
+                    ˹It is˺ Allah ˹Who˺ has sent down the best message—a Book of perfect consistency and repeated lessons—which causes the skin ˹and hearts˺ of those who fear their Lord to tremble, then their skin and hearts soften at the mention of ˹the mercy of˺ Allah. That is the guidance of Allah, through which He guides whoever He wills. But whoever Allah <span onClick={handleOpen} className={styles.magical} >leaves to stray</span> will be left with no guide.
                 </p>
                     <div className={styles.separator} > <h4>Chapter 39 | Verse 23</h4>  </div>
 
@@ -493,7 +493,7 @@ const Verses = () => {
             >
                 <div className={styles.center}>
                     <p className={styles.verse}>
-                    It is not ˹possible˺ for a human being to have Allah communicate with them, except through inspiration, or from behind a veil, or by sending a messenger-angel to reveal whatever He wills by His permission. He is surely <span onClick={handleOpen} className={styles.magical} >Most High,All-Wise</span>. And so We have sent to you ˹O Prophet˺ a revelation by Our command. You did not know of ˹this˺ Book and faith ˹before˺. But We have made it a light, by which We guide whoever We will of Our servants. And you are truly leading ˹all˺ to the Straight Path—the Path of Allah, to Whom belongs whatever is in the heavens and whatever is on the earth. Surely to Allah all matters will return ˹for judgment˺. 
+                    It is not ˹possible˺ for a human being to have Allah communicate with them, except through inspiration, or from behind a veil, or by sending a messenger-angel to reveal whatever He wills by His permission. He is surely <span onClick={handleOpen} className={styles.magical} >Most High, All-Wise</span>. And so We have sent to you ˹O Prophet˺ a revelation by Our command. You did not know of ˹this˺ Book and faith ˹before˺. But We have made it a light, by which We guide whoever We will of Our servants. And you are truly leading ˹all˺ to the Straight Path—the Path of Allah, to Whom belongs whatever is in the heavens and whatever is on the earth. Surely to Allah all matters will return ˹for judgment˺. 
                 </p>
                     <div className={styles.separator} > <h4>Chapter 42 | Verse 51-53</h4>  </div>
 
