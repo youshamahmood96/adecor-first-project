@@ -6,6 +6,11 @@ html,body {
   margin: 0;
   font-family: 'Fondamento', cursive,'Sorts Mill Goudy', serif,'Katibeh';
 }
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 :root{
   --primary:#0D0D0E;
   --fontHeader:100px;

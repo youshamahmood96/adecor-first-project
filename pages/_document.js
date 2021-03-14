@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import styles from '../styles/Document.module.css'
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx)
@@ -37,7 +36,7 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>  
-        <div className={styles.center} >
+        <div className="center" >
         <div id="cbox-5xY3X9avT56K4n0T"></div>
         </div>
       </Html>
