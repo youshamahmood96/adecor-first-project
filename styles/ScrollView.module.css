@@ -14,12 +14,12 @@
     margin:20px;
   }
   .magical{
-    /* line-height: 50px; */
+    display: inline-block;
+    height: 1.2em;
     border-bottom:2px solid black;
     background-repeat: no-repeat;
     background-size: 100% 0.1em;
     background-position: 0 88%;
-    transition: background-size 0.25s ease-in;
     cursor:pointer;
     transition:var(--animate)
 }
