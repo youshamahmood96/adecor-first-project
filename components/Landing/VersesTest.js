@@ -580,8 +580,7 @@ const Verses = () => {
             <div
                 ref={propN}
                 style={{ opacity: progressN }}
-                className={styles.verses}
-            >
+                className={styles.verses}>
                 <div className={styles.center}>
                     <p className={styles.verse}>
                     Let there be no compulsion in religion, for the truth stands out clearly from falsehood. So whoever renounces false gods and believes in Allah has certainly grasped the firmest, unfailing hand-hold. And Allah is All-Hearing, All-Knowing.
@@ -589,6 +588,9 @@ const Verses = () => {
                     <div className={styles.separator} > <h4> Chapter 2 | Verse 256</h4>  </div>
 
                 </div>
+                <div className={styles.center}>
+                <div id="cbox-5xY3X9avT56K4n0T"></div>
+            </div>
             </div>
         </React.Fragment>
 
