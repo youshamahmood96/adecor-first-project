@@ -96,12 +96,11 @@
     margin-left: .5em;
   }
 .magical{
-    margin-bottom:-20px;
     border-bottom:2px solid black;
     cursor:pointer;
     transition:var(--animate);
     display: inline-block;
-  height: 1.2em;
+    height: 1.2em;
 }
 .magical:hover{
     background-color: black;
