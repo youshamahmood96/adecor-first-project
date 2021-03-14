@@ -32,7 +32,7 @@ const Landing = ()=>{
       },[width])
     return(
         <>
-        {width>=780 ? <Desktop></Desktop>:<Mobile></Mobile>}
+        {width>=780 ? <Desktop/>:<Mobile/>}
         </>
     )
 }

@@ -96,15 +96,12 @@
     margin-left: .5em;
   }
 .magical{
-    line-height: 50px;
-    padding:0;
+    margin-bottom:-20px;
     border-bottom:2px solid black;
-    background-repeat: no-repeat;
-    background-size: 100% 0.2em;
-    background-position: 0 80%;
-    transition: background-size 0.25s ease-in;
     cursor:pointer;
-    transition:var(--animate)
+    transition:var(--animate);
+    display: inline-block;
+  height: 1.2em;
 }
 .magical:hover{
     background-color: black;
