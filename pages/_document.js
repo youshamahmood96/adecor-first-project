@@ -36,7 +36,9 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>  
+        <div className="center" >
         <div id="cbox-5xY3X9avT56K4n0T"></div>
+        </div>
       </Html>
     )
   }
