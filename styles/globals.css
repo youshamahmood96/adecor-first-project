@@ -6,6 +6,12 @@ html,body {
   margin: 0;
   font-family: 'Fondamento', cursive,'Sorts Mill Goudy', serif,'Katibeh';
 }
+.center-global{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+}
 .wrap-embed{
   position: relative;
   height:100vh;
