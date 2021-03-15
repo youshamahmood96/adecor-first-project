@@ -121,6 +121,20 @@
     height:35px;
     width:35px;
 }
+.horizontalLine h4 {
+    padding-top:30px;
+    font-weight:revert;
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+ } 
+ 
+.horizontalLine span { 
+     background:#fff; 
+     padding:0 10px; 
+}
 @media only screen and (min-width: 681px) {
     .verses{
         margin:200px;
