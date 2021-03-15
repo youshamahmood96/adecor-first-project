@@ -11,7 +11,6 @@
 }
 .here p{
   font-family: 'Sorts Mill Goudy', serif;
-  font-size:larger;
 }
 .hereM {
   height:100vh;
@@ -32,7 +31,7 @@
      padding:0 10px; 
 }
 .magical{
-  border-bottom:1px solid black;
+  border-bottom:2px solid black;
   cursor:pointer;
   transition:var(--animate);
   display: inline-block;
@@ -41,4 +40,9 @@
 .magical:hover{
   background-color: black;
   color:white;
+}
+@media only screen and (min-width: 375px) {
+    .here p{
+      font-size:larger;
+    }
 }
