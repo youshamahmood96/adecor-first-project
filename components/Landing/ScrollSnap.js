@@ -24,7 +24,8 @@ const ScrollSnap = () => {
           border: 'none',
           outline:'none',
           borderRadius:'10px', 
-          padding: theme.spacing(2, 4, 3)
+          padding: theme.spacing(2, 4, 3),
+          fontFamily: 'Sorts Mill Goudy'
         },
         close:{
           marginLeft:'70vw',
