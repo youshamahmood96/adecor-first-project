@@ -70,12 +70,9 @@
     font-weight:var(--fontWeightHeader);
 }
 .bottomMobile img{
-    width:50px;
-    height:60px;
-    padding-bottom:20px;
     position: absolute;
-    top: 85%;
-    right:-2%;
+    top: 90%;
+    left: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
 }

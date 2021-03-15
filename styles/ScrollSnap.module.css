@@ -1,0 +1,40 @@
+.portfolioParent {
+  height:100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.here {
+  margin:0px 30px;
+  height:100vh;
+  scroll-snap-align: start;
+}
+.hereM {
+  height:100vh;
+  scroll-snap-align: start;
+}
+.horizontalLine h4 {
+    padding-top:30px;
+    font-weight:revert;
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+ } 
+ 
+.horizontalLine span { 
+     background:#fff; 
+     padding:0 10px; 
+}
+.magical{
+  border-bottom:2px solid black;
+  cursor:pointer;
+  transition:var(--animate);
+  display: inline-block;
+  height: 1.2em;
+}
+.magical:hover{
+  background-color: black;
+  color:white;
+}

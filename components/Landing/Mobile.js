@@ -1,9 +1,10 @@
 import React from 'react';
+import ScrollSnap from './ScrollSnap';
 import ScrollView from './ScrollView'
 const Mobile = () => {
     return (
        <React.Fragment>
-       <ScrollView></ScrollView>
+      <ScrollSnap></ScrollSnap>
        </React.Fragment>
     );
 };

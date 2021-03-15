@@ -355,20 +355,14 @@ const Verses = () => {
       const useStyles = makeStyles((theme) => ({
         paper: {
           position: 'absolute',
-          width: 400,
+          width: '400px',
           backgroundColor: theme.palette.background.paper,
           border: 'none',
           outline:'none',
           borderRadius:'10px', 
           padding: theme.spacing(2, 4, 3),
-        },
-        close:{
-            position: 'relative',
-            marginLeft:'400px',
-            cursor:'pointer',
-            height:'25px',
-            width:'25px'
-        },
+          fontFamily:'Sorts Mill Goudy'
+        }
       }));
       
         const classes = useStyles();
@@ -385,12 +379,14 @@ const Verses = () => {
       
         const body = (
           <div style={modalStyle} className={classes.paper}>
-          <AiOutlineCloseCircle className={classes.close} onClick={handleClose} />
-            <h2 id="simple-modal-title">Text about sun</h2>
+          <AiOutlineCloseCircle className={styles.close} onClick={handleClose} />
+            <div className={classes.modalText} >
+            <h2 style={{textAlign: 'center',marginTop:'-20px'}} id="simple-modal-title">Text about sun</h2>
+            <hr/>
             <p id="simple-modal-description">
-              More text about sun
-              
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ex dicta maiores libero minus obcaecati iste optio, eius labore repellendus.
             </p>
+            </div>
           </div>
         );
     return (

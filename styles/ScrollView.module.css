@@ -77,12 +77,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-        min-width: 100vw;
-        min-height: 100vh;
-        flex:0 0 100vw;
-        scroll-snap-align: start;
-        margin:20px !important;
-        overflow-y:hidden !important;
+    min-width: 100vw;
+    min-height: 100vh;
+    flex:0 0 100vw;
+    scroll-snap-align: start;
+    margin:20px !important;
+    overflow-y:hidden !important;
+    scroll-snap-type: x;
   }
   .versesCenter{
       /* position:absolute;

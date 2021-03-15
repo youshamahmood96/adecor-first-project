@@ -106,6 +106,21 @@
     background-color: black;
     color:white;
 }
+.modalText h2{
+    text-align:center;
+}
+.close{
+    position: relative;
+    margin-left:380px;
+    cursor:pointer;
+    height:30px;
+    width:30px;
+    transition:var(--animate);
+}
+.close:hover{
+    height:35px;
+    width:35px;
+}
 @media only screen and (min-width: 681px) {
     .verses{
         margin:200px;
