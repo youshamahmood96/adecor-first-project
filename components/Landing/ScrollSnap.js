@@ -236,6 +236,11 @@ const ScrollSnap = () => {
         </div>
         </div>
         </div>
+        <div className={styles.here} >
+        <div className="center-global" >
+        <div id="cbox-5xY3X9avT56K4n0T"></div>
+        </div>
+        </div>
 
 
 
