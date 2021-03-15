@@ -9,6 +9,9 @@
   height:100vh;
   scroll-snap-align: start;
 }
+.here p{
+  font-family: 'Sorts Mill Goudy', serif;
+}
 .hereM {
   height:100vh;
   scroll-snap-align: start;
@@ -28,7 +31,7 @@
      padding:0 10px; 
 }
 .magical{
-  border-bottom:2px solid black;
+  border-bottom:1px solid black;
   cursor:pointer;
   transition:var(--animate);
   display: inline-block;
