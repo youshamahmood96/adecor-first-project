@@ -50,7 +50,7 @@ const ScrollSnap = () => {
           <div style={modalStyle} className={classes.paper}>
           <AiOutlineCloseCircle className={classes.close} onClick={handleClose} />
             <div className={classes.modalText} >
-            <h2 style={{textAlign: 'center',marginTop:'-20px'}} id="simple-modal-title">Text about sun</h2>
+            <h2 style={{textAlign: 'center',marginTop:'-20px',lineHeight:'0.1em'}} id="simple-modal-title">Text about sun</h2>
             <hr/>
             <p id="simple-modal-description">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ex dicta maiores libero minus obcaecati iste optio, eius labore repellendus.

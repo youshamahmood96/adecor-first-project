@@ -110,7 +110,6 @@
     text-align:center;
 }
 .close{
-    position: relative;
     margin-left:380px;
     cursor:pointer;
     height:30px;
@@ -120,6 +119,10 @@
 .close:hover{
     height:35px;
     width:35px;
+}
+.closeWrap{
+    height:50px;
+    width:50px;
 }
 .horizontalLine h4 {
     padding-top:30px;

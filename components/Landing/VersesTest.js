@@ -356,11 +356,12 @@ const Verses = () => {
         paper: {
           position: 'absolute',
           width: '400px',
+          height:'150px',
           backgroundColor: theme.palette.background.paper,
           border: 'none',
           outline:'none',
           borderRadius:'10px', 
-          padding: theme.spacing(2, 4, 3),
+          padding: '20px',
           fontFamily:'Sorts Mill Goudy'
         }
       }));
@@ -379,9 +380,11 @@ const Verses = () => {
       
         const body = (
           <div style={modalStyle} className={classes.paper}>
-          <AiOutlineCloseCircle className={styles.close} onClick={handleClose} />
+         <div className={styles.closeWrap} >
+         <AiOutlineCloseCircle className={styles.close} onClick={handleClose}></AiOutlineCloseCircle>
+         </div>
             <div className={classes.modalText} >
-            <h2 style={{textAlign: 'center',marginTop:'-20px'}} id="simple-modal-title">Text about sun</h2>
+            <h2 style={{textAlign: 'center',marginTop:'-20px',lineHeight:'0.1em'}} id="simple-modal-title">Text about sun</h2>
             <hr/>
             <p id="simple-modal-description">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ex dicta maiores libero minus obcaecati iste optio, eius labore repellendus.
